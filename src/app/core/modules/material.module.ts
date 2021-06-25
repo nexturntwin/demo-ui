@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 
+const materialModules = [ 
+]
+
 @NgModule({
   imports: [
   ],
-  exports: [  
+  exports: [ 
   ]
 })
 
