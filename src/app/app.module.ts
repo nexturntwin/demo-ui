@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './core/modules/material.module';
 import { HomeComponent } from './feature/common/home/home.component';
+import { SampleComponent } from './feature/common/sample/sample.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule,

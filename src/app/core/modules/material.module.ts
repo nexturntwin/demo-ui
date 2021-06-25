@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
-const materialModules = [ 
+const materialModules = [
+  MatButtonModule,
+  MatDividerModule
 ]
 
 @NgModule({
-  imports: [
-  ],
-  exports: [ 
-  ]
+  imports: [materialModules],
+  exports: [materialModules]
 })
 
 //To keep track of all the required Material Modules required.
