@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './core/modules/material.module';
 import { HomeComponent } from './feature/common/home/home.component';
 import { SampleComponent } from './feature/common/sample/sample.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SampleComponent
+    SampleComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
