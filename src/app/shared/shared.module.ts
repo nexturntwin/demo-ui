@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../core/modules/material.module';
 
@@ -6,12 +7,14 @@ import { MaterialModule } from '../core/modules/material.module';
     imports: [
         FormsModule,
         ReactiveFormsModule,
+        FlexLayoutModule,
         MaterialModule
     ],
     declarations: [],
     exports: [
         FormsModule,
         ReactiveFormsModule,
+        FlexLayoutModule,
         MaterialModule
     ]
 })

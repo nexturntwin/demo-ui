@@ -1,22 +1,24 @@
-<div class="container">
-    <form [formGroup]="signupForm" fxLayout="column">
+<div class="container login-container" fxLayout="row" fxLayoutAlign="center center">
+    <form id="signupForm" [formGroup]="signupForm" fxFlex="30%" fxFlex.sm="50%" fxFlex.xs="90%">
         <mat-card>
-            <mat-card-title>Megham Sign Up Form</mat-card-title>
-            <mat-card-subtitle>Create your Megham account</mat-card-subtitle>
+            <mat-card-title>Megham</mat-card-title>
+            <mat-card-subtitle>Create your Megham Account</mat-card-subtitle>
             <mat-card-content>
-                <mat-form-field>
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>First Name</mat-label>
                     <input id="firstNameInput" matInput placeholder="Your First Name" formControlName="firstName"
                             type="text">
                 </mat-form-field>
-                <mat-form-field>
+                <mat-form-field  appearance="outline" class="half-width">
+                    <mat-label>Last Name</mat-label>
                     <input id="lastNameInput" matInput placeholder="Your Last Name" formControlName="lastName"
                             type="text">
                 </mat-form-field>
-                <mat-form-field>
+                <mat-form-field class="full-width">
                     <input id="emailInput" matInput placeholder="Email" formControlName="email" autocomplete="email"
                             type="email">
                 </mat-form-field>
-                <mat-form-field>
+                <mat-form-field class="full-width">
                     <input id="passwordInput" matInput placeholder="Password" formControlName="password" type="password">
                 </mat-form-field>
             </mat-card-content>
