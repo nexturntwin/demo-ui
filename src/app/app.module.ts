@@ -8,6 +8,7 @@ import { MaterialModule } from './core/modules/material.module';
 import { HomeComponent } from './feature/common/home/home.component';
 import { SampleComponent } from './feature/common/sample/sample.component';
 import { CustomModules } from './core/modules/custom.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { CustomModules } from './core/modules/custom.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    SharedModule,
     CustomModules
   ],
   providers: [],

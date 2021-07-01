@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  signupform: FormGroup;
+  signupForm: FormGroup;
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   }
 
   private createForm() {
-    this.signupform = new FormGroup({
+    this.signupForm = new FormGroup({
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
