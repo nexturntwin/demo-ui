@@ -4,8 +4,8 @@ import { SigninComponent } from "src/app/auth/signin/signin.component";
 import { SignupComponent } from "src/app/auth/signup/signup.component";
 
 const authRoutes: Routes = [
-    {path: 'signin', component: SigninComponent},
-    {path: 'signup', component: SignupComponent}
+    {path: 'auth/signin', component: SigninComponent},
+    {path: 'auth/signup', component: SignupComponent}
 ]
 
 @NgModule({
