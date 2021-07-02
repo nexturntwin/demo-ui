@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  currentUser: String;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.currentUser = "Murugan Nagarajan"
   }
 
 }

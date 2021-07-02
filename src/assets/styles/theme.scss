@@ -33,7 +33,7 @@ $mgm-theme: mat.define-light-theme((
 ));
 
 // By default apply the megham-custom-theme
-@include mat.all-component-themes($mgm-theme);
+@include mat.all-component-themes($light-theme);
 
 /*
 // Apply the dark theme only when the `.dark-theme` CSS class is applied
