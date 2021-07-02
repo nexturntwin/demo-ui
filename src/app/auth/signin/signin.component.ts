@@ -25,6 +25,6 @@ export class SigninComponent implements OnInit {
   }
 
   login() {
-
+    console.log(this.loginForm.value);
   }
 }

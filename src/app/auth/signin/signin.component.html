@@ -1,11 +1,11 @@
 <div class="container login-container" fxLayout="row" fxLayoutAlign="center center">
-    <form id="signupForm" [formGroup]="loginForm" fxFlex="30%" fxFlex.sm="50%" fxFlex.xs="90%">
+    <form id="signupForm" [formGroup]="loginForm" (ngSubmit)="login()" fxFlex="30%" fxFlex.sm="50%" fxFlex.xs="90%">
         <mat-card>
             <mat-card-title>Megham</mat-card-title>
             <mat-card-subtitle>Log in to your Megham Account</mat-card-subtitle>
             <mat-card-content>
                 <mat-form-field class="full-width">
-                    <input id="emailInput" matInput placeholder="Email" formControlName="email" autocomplete="email"
+                    <input id="emailInput" matInput placeholder="Email" formControlName="email" autocomplete="email" autofocus
                             type="email">
                 </mat-form-field>
                 <mat-form-field class="full-width">
@@ -16,7 +16,7 @@
                 <mat-slide-toggle formControlName="rememberMe">Remember my email address</mat-slide-toggle>
             </div>
             <mat-card-actions>
-                <button mat-raised-button id="signup" color="primary" (click)="login()">Log In</button>
+                <button mat-raised-button id="signup" color="primary" type="submit">Log In</button>
             </mat-card-actions>
         </mat-card>
     </form>
