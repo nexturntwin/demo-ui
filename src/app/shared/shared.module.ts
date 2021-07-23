@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../core/modules/material.module';
 import { LayoutComponent } from './layout/layout.component';
 import { RouterModule, Routes } from "@angular/router";
+import { ThemeSwitchComponent } from './theme-switch/theme-switch.component';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { RouterModule, Routes } from "@angular/router";
         MaterialModule
     ],
     declarations: [
-        LayoutComponent
+        LayoutComponent,
+        ThemeSwitchComponent
     ],
     exports: [
         FormsModule,
