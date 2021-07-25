@@ -5,6 +5,7 @@ import { MaterialModule } from '../core/modules/material.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { RouterModule, Routes } from "@angular/router";
 import { ThemeSwitchComponent } from './components/theme-switch/theme-switch.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { ThemeSwitchComponent } from './components/theme-switch/theme-switch.com
         FormsModule,
         ReactiveFormsModule,
         FlexLayoutModule,
-        MaterialModule
+        MaterialModule,
+        HttpClientModule
     ],
     declarations: [
         LayoutComponent,

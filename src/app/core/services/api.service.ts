@@ -29,9 +29,8 @@ export class ApiService {
 	}
 
 	delete<T>(request: APIRequest<T>): Observable<APIResponse<T>> {
-		return this.http.delete<APIResponse<T>>(request.url).pipe(
-			tap(response => response),
-			catchError(error => throwError(this.getErrorObject(error)))
+		return this.http.delete<APIResponse<T>>(request.url)
+			.pipe(catchError(error => throwError(this.getErrorObject(error)))
 		);
 	}
 
@@ -45,7 +44,6 @@ export class ApiService {
 export class APIRequest<T> {
 	url: string;
 	body?: T;
-
 	constructor(private _url: string, private _body?: T) {
 		this.url = this._url;
 		this.body = this._body;

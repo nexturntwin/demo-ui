@@ -7,6 +7,17 @@ export const environment = {
   orgName: 'MEGAM',
   appName: 'MegamOps',
   envName: 'DEV',
+  api: {
+    mts: {
+      endpoint: 'http://localhost:8002/mts/',
+      urls: {
+        contact: 'api/v1/contact/'
+      }
+    },
+    firebase: {
+      endpoint: 'https://app-shopping-51b37.firebaseio.com/'
+    }
+  },
   endpoint: {
     mts: 'http://localhost:8002/mts/',
     firebase: 'https://app-shopping-51b37.firebaseio.com/',
