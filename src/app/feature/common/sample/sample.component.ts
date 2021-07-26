@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-sample',
@@ -10,6 +11,8 @@ export class SampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(environment.orgName);
+    console.log(environment.urls.mts.contact)
   }
 
 }

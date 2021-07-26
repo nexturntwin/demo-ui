@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './feature/common/home/home.component';
 import { SampleComponent } from './feature/common/sample/sample.component';
-import { LayoutComponent } from './shared/layout/layout.component';
+import { LayoutComponent } from './shared/components/layout/layout.component';
 
 const routes: Routes = [
   //TODO: Create seprate route modules class for each UI.

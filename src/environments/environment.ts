@@ -3,7 +3,35 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  orgName: 'MEGAM',
+  appName: 'MegamOps',
+  envName: 'DEV',
+  api: {
+    mts: {
+      endpoint: 'http://localhost:8002/mts/',
+      urls: {
+        contact: 'api/v1/contact/'
+      }
+    },
+    firebase: {
+      endpoint: 'https://app-shopping-51b37.firebaseio.com/'
+    }
+  },
+  endpoint: {
+    mts: 'http://localhost:8002/mts/',
+    firebase: 'https://app-shopping-51b37.firebaseio.com/',
+  },
+  urls: {
+    mts: {
+      contact: {
+        getUrl: 'api/v1/contact/',
+        postUrl: 'api/v1/contact',
+        putUrl: 'api/v1/contact/',
+        deleteUrl: 'api/v1/contact/'
+      }
+    }
+  }
 };
 
 /*
