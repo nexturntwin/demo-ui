@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './feature/common/home/home.component';
 import { SampleComponent } from './feature/common/sample/sample.component';
 import { SharedModule } from './shared/shared.module';
-import { CoreModule } from '@angular/flex-layout';
+import { CoreModules } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { CoreModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    CoreModule
+    CoreModules
   ],
   providers: [],
   bootstrap: [AppComponent]
