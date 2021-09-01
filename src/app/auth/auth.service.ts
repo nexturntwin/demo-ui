@@ -30,7 +30,7 @@ export class AuthService {
           .pipe(filter((e: any) => {
             return e.type === 'token_received';
           }))
-        .subscribe(() => handleAuthToken());
+        .subscribe(() => this.handleToken());
       
       this.oauthService.loadDiscoveryDocumentAndLogin().then(isLoggedIn => {
         if (isLoggedIn) {
@@ -41,16 +41,18 @@ export class AuthService {
           reject("Megam Client - Authentication Failed");
         }
       });
-      
-      let handleAuthToken = () => {
-        this.oauthService.loadUserProfile();
-        this._claims = this.oauthService.getIdentityClaims();
-        this._accessToken = this.oauthService.getAccessToken();
-        this._idToken = this.oauthService.getIdToken();
-      }
     })
   };
 
+  private handleToken() {
+    this.oauthService.loadUserProfile();
+    this._claims = this.oauthService.getIdentityClaims();
+    this._accessToken = this.oauthService.getAccessToken();
+    this._idToken = this.oauthService.getIdToken();
+  }
+  logout() {
+    this.oauthService.logOut();
+  }
   
 }
 
