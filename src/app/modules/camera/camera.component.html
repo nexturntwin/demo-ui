@@ -5,8 +5,8 @@
                 <mat-card-title>Face Scanner</mat-card-title>
                 <mat-card-subtitle>Toggle your camera here &nbsp;
                     <span matTooltip="Toggle Cam">
-                        <mat-slide-toggle (click)="toggleWebcam()"></mat-slide-toggle>
-                    </span>
+                <mat-slide-toggle (click)="toggleWebcam()"></mat-slide-toggle>
+            </span>
                 </mat-card-subtitle>
                 <mat-card-content>
                     <webcam [height]="500" [width]="500" [trigger]="triggerObservable"
@@ -20,6 +20,22 @@
                 <mat-card-actions>
                     <button mat-raised-button color="accent" (click)="triggerSnapshot();">Smile Pls</button>
                 </mat-card-actions>
+            </mat-card>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="container" fxLayout="row" fxLayoutAlign="center none">
+            <mat-card style="width: 640px; height: auto" >
+                <mat-card-title>Captured Image</mat-card-title>
+                <mat-card-subtitle>
+                    <h4 *ngIf="errors.length == 0">Image to be processed.</h4>
+                    <h4 *ngIf="errors.length > 0">Messages:</h4>
+                    <ul *ngFor="let error of errors">
+                        <li>{{error | json}}</li>
+                    </ul>
+                </mat-card-subtitle>
+                <mat-card-content class="snapshot" *ngIf="webcamImage">
+                    <img mat-card-image [src]="webcamImage.imageAsDataUrl"/>
+                </mat-card-content>
             </mat-card>
         </div>
     </div>
