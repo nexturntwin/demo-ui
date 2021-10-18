@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  orgName: 'MEGAM',
-  appName: 'MegamOps',
+  orgName: 'NEXTURN',
+  appName: 'DEMO',
   envName: 'DEV',
   api: {
     mts: {
