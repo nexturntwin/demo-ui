@@ -12,7 +12,6 @@ export class SampleComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(environment.orgName);
-    console.log(environment.urls.mts.contact)
   }
 
 }

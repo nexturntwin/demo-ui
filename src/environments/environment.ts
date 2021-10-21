@@ -14,22 +14,14 @@ export const environment = {
         contact: 'api/v1/contact/'
       }
     },
+    nxt: {
+      endpoint: 'http://localhost:8080/nxt/',
+      urls: {
+        facedetector: 'api/v1/facedetector/',
+      }
+    },
     firebase: {
       endpoint: 'https://app-shopping-51b37.firebaseio.com/'
-    }
-  },
-  endpoint: {
-    mts: 'http://localhost:8002/mts/',
-    firebase: 'https://app-shopping-51b37.firebaseio.com/',
-  },
-  urls: {
-    mts: {
-      contact: {
-        getUrl: 'api/v1/contact/',
-        postUrl: 'api/v1/contact',
-        putUrl: 'api/v1/contact/',
-        deleteUrl: 'api/v1/contact/'
-      }
     }
   }
 };
