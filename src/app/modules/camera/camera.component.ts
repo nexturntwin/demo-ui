@@ -10,7 +10,7 @@ import { DetectorService } from "../../core/services/facedetector/detector.servi
 })
 export class CameraComponent implements OnInit {
 
-  public showWebcam = true;
+  public showWebcam = false;
   public allowCameraSwitch = true;
   public multipleWebcamsAvailable = false;
   public deviceId: string;
@@ -18,9 +18,12 @@ export class CameraComponent implements OnInit {
   public errors: WebcamInitError[] = [];
   public webcamImage: any = null;
   public imageToProcess = new FormData();
+  public faceCount: any = 0;
+  public showFaceCount: boolean = false;
   private trigger: Subject<void> = new Subject<void>();
   private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
   
+
   constructor(private detectorService: DetectorService) { }
 
   ngOnInit(): void {
@@ -66,7 +69,8 @@ export class CameraComponent implements OnInit {
   }
 
   public uploadImage() {
-    this.detectorService.uploadImage(this.imageToProcess);
+    this.showFaceCount = true;
+    this.detectorService.uploadImage(this.imageToProcess).subscribe(res => { console.log(this.faceCount); this.faceCount = res; });
   }
 
 }

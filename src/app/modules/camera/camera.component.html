@@ -1,14 +1,14 @@
 <div class="container" fxLayout="row" fxLayoutAlign="center none">
     <div fxFlex="95%">
         <div class="container" fxLayout="row" fxLayoutAlign="center none">
-            <mat-card>
+            <mat-card style="width: 640px; height: auto">
                 <mat-card-title>Face Scanner</mat-card-title>
                 <mat-card-subtitle>Toggle your camera here &nbsp;
                     <span matTooltip="Toggle Cam">
-                <mat-slide-toggle (click)="toggleWebcam()"></mat-slide-toggle>
-            </span>
+                        <mat-slide-toggle (click)="toggleWebcam()"></mat-slide-toggle>
+                    </span>
                 </mat-card-subtitle>
-                <mat-card-content>
+                <mat-card-content fxLayoutAlign="center none">
                     <webcam [height]="500" [width]="375" [trigger]="triggerObservable"
                         (imageCapture)="handleImage($event)" *ngIf="showWebcam"
                         [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
@@ -37,8 +37,12 @@
                 <mat-card-content *ngIf="webcamImage">
                     <img mat-card-image [src]="webcamImage.imageAsDataUrl"/>
                 </mat-card-content>
-                <mat-card-actions *ngIf="webcamImage">
+                <mat-card-actions *ngIf="webcamImage" fxLayoutGap="5px">
                     <button mat-raised-button color="accent" (click)="uploadImage();">Submit</button>
+                    <span *ngIf="showFaceCount">
+                        <button mat-raised-button color="warn" *ngIf="faceCount>0">Number of faces: {{faceCount}}</button>
+                        <button mat-raised-button color="warn" *ngIf="faceCount==0">No faces identified</button>
+                    </span>
                 </mat-card-actions>
             </mat-card>
         </div>

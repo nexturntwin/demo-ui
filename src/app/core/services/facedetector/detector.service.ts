@@ -14,9 +14,9 @@ export class DetectorService {
   constructor(private apiService: ApiService, private httpClient: HttpClient) { }
 
   public uploadImage(data: FormData) {
-    this.apiService.post<any, any>(
+    return this.apiService.post<any, any>(
       new APIRequest<any>(this.serviceEndpoint + this.facedetectorApiUrl + 'scanfaces', data)
-    ).subscribe(res => console.log(res));
+    )
   }
 
   public dataURItoBlob(dataURI : any, fileName : string) : File {
