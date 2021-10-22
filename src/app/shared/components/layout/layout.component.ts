@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -9,10 +10,11 @@ export class LayoutComponent implements OnInit {
 
   userName: string;
   
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.userName = "Murugan";
+    this.route.navigate(['/capture']);
   }
 
 }
