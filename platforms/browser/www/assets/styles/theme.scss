@@ -1,0 +1,43 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+// Define a light theme
+$light-primary: mat.define-palette(mat.$purple-palette);
+$light-accent: mat.define-palette(mat.$green-palette);
+$light-theme: mat.define-light-theme((
+ color: (
+   primary: $light-primary,
+   accent: $light-accent,
+ )
+));
+
+// Define a dark theme
+$dark-primary: mat.define-palette(mat.$deep-purple-palette);
+$dark-accent: mat.define-palette(mat.$amber-palette);
+$dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $dark-primary,
+   accent: $dark-accent,
+ )
+));
+
+// Define a custom theme
+$mgm-primary: mat.define-palette(mat.$blue-gray-palette);
+$mgm-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
+$mgm-theme: mat.define-light-theme((
+ color: (
+   primary: $mgm-primary,
+   accent: $mgm-accent,
+ )
+));
+
+// Apply the dark theme only when the `.dark-theme` CSS class is applied
+.dark-theme {
+    @include mat.all-component-themes($dark-theme);
+}
+
+// Apply the light theme only when the `.light-theme` CSS class is applied
+.light-theme {
+    @include mat.all-component-themes($light-theme);
+}

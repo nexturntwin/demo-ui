@@ -1,20 +1,23 @@
 export const environment = {
-  production: true,
-  orgName: 'MEGAM',
-  appName: 'MegamOps',
+  production: false,
+  orgName: 'NEXTURN',
+  appName: 'DEMO',
   envName: 'PROD',
-  endpoint: {
-    mts: 'http://localhost:8002/mts/',
-    firebase: 'https://app-shopping-51b37.firebaseio.com/',
-  },
   api: {
     mts: {
-      contact: {
-        getUrl: 'api/v1/contact/',
-        postUrl: 'api/v1/contact',
-        putUrl: 'api/v1/contact/',
-        deleteUrl: 'api/v1/contact/'
+      endpoint: 'http://localhost:8002/mts/',
+      urls: {
+        contact: 'api/v1/contact/'
       }
+    },
+    nxt: {
+      endpoint: 'http://localhost:8080/nxt/',
+      urls: {
+        facedetector: 'api/v1/facedetector/',
+      }
+    },
+    firebase: {
+      endpoint: 'https://app-shopping-51b37.firebaseio.com/'
     }
   }
 };
